@@ -1,0 +1,21 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app: rcaspnet
+  name: rcaspnet
+  namespace: rc-namespace
+spec:
+  host: "rcaspnet-rc-namespace.apps.srpoc.silkroad-eng.local"
+  port:
+    targetPort: 8080
+  to:
+    kind: Service
+    name: rcaspnet
+    weight: 100
+status:
+  ingress:
+  - conditions:
+    - status: "True"
+      type: Admitted
