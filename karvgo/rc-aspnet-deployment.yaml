@@ -20,7 +20,7 @@ spec:
         app: rcaspnet
     spec:
       containers:
-      - image: index.docker.io/rchandnani0615/argocdaspnet:firsttry
+      - image: index.docker.io/rchandnani0615/argocdaspnet:secondtry
         name: rcaspnet
         env:
         - name: COLOR
