@@ -3,8 +3,8 @@ kind: Route
 metadata:
   creationTimestamp: null
   labels:
-    app: rcaspnetHelm
-  name: rcaspnetHelm
+    app: rcaspnethelm
+  name: rcaspnethelm
   namespace: rc-namespace
 spec:
   host: ""
@@ -12,7 +12,7 @@ spec:
     targetPort: 8080
   to:
     kind: Service
-    name: rcaspnetHelm
+    name: rcaspnethelm
     weight: 100
 status:
   ingress:

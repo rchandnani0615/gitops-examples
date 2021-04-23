@@ -4,8 +4,8 @@ kind: Service
 metadata:
   creationTimestamp: null
   labels:
-    app: rcaspnetHelm
-  name: rcaspnetHelm
+    app: rcaspnethelm
+  name: rcaspnethelm
   namespace: rc-namespace
 spec:
   ports:
@@ -13,5 +13,5 @@ spec:
     protocol: TCP
     targetPort: 8080
   selector:
-    app: rcaspnetHelm
+    app: rcaspnethelm
 ---
