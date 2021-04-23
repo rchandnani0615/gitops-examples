@@ -1,0 +1,29 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: rcaspnethelmocp
+  name: rcaspnethelmocp
+  namespace: rc-namespace
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rcaspnethelmocp
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: rcaspnethelmocp
+    spec:
+      containers:
+      - image: image-registry.openshift-image-registry.svc:5000/rc-namespace/example:1.0
+        name: rcaspnethelmocp
+        env:
+        - name: COLOR
+          value: "blue"
+        resources: {}
+---
