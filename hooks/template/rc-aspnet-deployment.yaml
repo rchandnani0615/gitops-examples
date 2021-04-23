@@ -1,0 +1,29 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: rcaspnetHelm
+  name: rcaspnetHelm
+  namespace: rc-namespace
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rcaspnetHelm
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: rcaspnetHelm
+    spec:
+      containers:
+      - image: index.docker.io/rchandnani0615/argocdaspnet:thirdtry
+        name: rcaspnetHelm
+        env:
+        - name: COLOR
+          value: "blue"
+        resources: {}
+---
